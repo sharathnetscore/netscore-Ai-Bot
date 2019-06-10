@@ -1,4 +1,3 @@
-@@ -0,0 +1,58 @@
 <?php 
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -10,12 +9,10 @@ if($method == 'POST')
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-	
-	//NLAuth nlauth_account=TSTDRV1380373, nlauth_email=sarath@netscoretech.com, nlauth_signature=NetScore@123, nlauth_role=3
 
 $account    = "TSTDRV1380373";
 $email      = "sarath@netscoretech.com";
-$pass       = "NetScore@123";
+$pass       = "NetSuite@123";
 $role_id    = "3"; // 3 is the standard role for administrator
 $content_type = "text/plain";
 $host = "https://rest.netsuite.com/app/site/hosting/restlet.nl?script=1729&deploy=1";
@@ -40,6 +37,9 @@ $arrOptions = array(
 $context = stream_context_create($arrOptions);
 $soInternalID = 133215;
 //urlencode ($text)
+echo "Test NetSuite";
+echo $text;
+
 $responseNS = file_get_contents($host . "&text=".urlencode ($text), false, $context);
 if (!$responseNS)
 {
