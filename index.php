@@ -12,7 +12,7 @@ if($method == 'POST')
 
 $account    = "TSTDRV1380373";
 $email      = "sarath@netscoretech.com";
-$pass       = "NetSuite@123";
+$pass       = "NetScore@123";
 $role_id    = "3"; // 3 is the standard role for administrator
 $content_type = "text/plain";
 $host = "https://rest.netsuite.com/app/site/hosting/restlet.nl?script=1729&deploy=1";
