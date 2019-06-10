@@ -31,7 +31,7 @@ $headerString = "Authorization: NLAuth nlauth_account=". $account . ", " .
 $arrOptions = array(
         'http'=>array(
         'header'=> $headerString,
-        'method'=>"GET",
+        'method'=>"POST",
         'timeout'=>300
         ));
 $context = stream_context_create($arrOptions);
