@@ -39,8 +39,8 @@ $soInternalID = 133215;
 //urlencode ($text)
 echo "Test NetSuite";
 echo $text;
-
-$responseNS = file_get_contents($host . "&text=".urlencode ($text), false, $context);
+//.urlencode ($text)
+$responseNS = file_get_contents($host . "&text=hi", false, $context);
 if (!$responseNS)
 {
     echo "Error: Invalid Response."; 
