@@ -9,7 +9,7 @@ if($method == 'POST')
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-
+echo $text;
 $account    = "TSTDRV1380373";
 $email      = "sarath@netscoretech.com";
 $pass       = "NetScore@123";
@@ -37,8 +37,8 @@ $arrOptions = array(
 $context = stream_context_create($arrOptions);
 $soInternalID = 133215;
 //urlencode ($text)
-echo "Test NetSuite";
-echo $text;
+//echo "Test NetSuite";
+//echo $text;
 
 $responseNS = file_get_contents($host . "&text=".urlencode ($text), false, $context);
 if (!$responseNS)
